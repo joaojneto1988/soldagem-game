@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Soldagem Gemini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="welding-canvas" width="800" height="400"></canvas>
+
+        <div id="hud-panel">
+            <h2>CONTROLE DE MOVIMENTO</h2>
+            
+            <div class="indicator-group">
+                <h3>AVANÇO ($\text{mm/s}$)</h3>
+                <p class="value" id="avanço-value">0.0</p>
+                <p class="ideal-range">Ideal: 30 - 35</p>
+            </div>
+            
+            <hr>
+
+            <div class="indicator-group">
+                <h3>OSCILAÇÃO ($\text{Hz}$)</h3>
+                <p class="value" id="oscilação-value">0.0</p>
+                <p class="ideal-range">Ideal: 60 - 65</p>
+            </div>
+            
+            <hr>
+
+            <div id="score-panel">
+                <h4>PONTUAÇÃO ATUAL</h4>
+                <p>Qualidade: <span id="quality-score">0%</span></p>
+                <p>Rastreamento: <span id="tracking-score">0%</span></p>
+            </div>
+            
+            <div id="final-message" style="display: none;">
+                </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
